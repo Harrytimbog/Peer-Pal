@@ -10,6 +10,7 @@
 
     include("./includes/utils/databaseConfig.php");
 
+
 ?>
 
 
@@ -24,18 +25,34 @@
   <link rel="stylesheet" href="/css/homepage.css">
   <link rel="stylesheet" href="./css/buddies-content.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/get_buddies.css">
+  
 </head>
 <body>
   <!-- Navbar -->
   <?php include("./components/navbar.php"); ?>
   <!-- Navbar -->
+<div class="buddies">
+
+<div class="get-buddies">
 
   <div style="height: 70vh;">
   <?php
    include("./components/get_buddies.php");
   ?>
+
   </div>
+  
+  </div>
+
+
+  
+  </div>
+
   <!-- FOOTER -->
-  <?php include("./components/footer.php"); ?>
+   <?php 
+      include("./components/footer.php");
+    ?>
+
 </body>
 </html>

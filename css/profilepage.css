@@ -102,7 +102,7 @@ header {
 
 a.button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 7px 10px;
   background-color: #007bff;
   color: #fff;
   text-decoration: none;
@@ -120,9 +120,63 @@ a.button:active {
 }
 
 body {
-  background-image: linear-gradient(to right, blue, skyblue);
+  background-image: linear-gradient(to right, blue, rgb(70, 146, 176));
 }
 
 footer {
   background-color: aliceblue;
 }
+
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  
+}
+
+.profile-actions img {
+  width: 50px;
+  height: 50px;
+  
+}
+.rating-box{
+  padding-top: 20px;
+}
+
+.rating-box{
+  padding-top: 20px;
+  color: #007bff;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+
+.rating input {
+  display: none;
+}
+
+
+.rating label {
+  display: inline-block;
+  padding: 5px;
+  font-size: 25px;
+  color: dimgray;
+  cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #ffc107;
+}
+
+.rating-box h2{
+  text-align: center;
+  
+}
+
+
+
