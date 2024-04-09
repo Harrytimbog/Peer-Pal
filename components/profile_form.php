@@ -242,6 +242,10 @@
     <option value="Part-time">Part-Time</option>
   </select>
   <br><br>
+
+  <label for="phone_number">Phone Number:</label>
+  <input type="text" id="last_name" name="phone_number" value="<?php echo $user['phone_number']; ?>"><br><br>
+
   
   <label for="photo">Photo:</label>
   <!-- <input type="text" id="photo" name="photo" value="<?php echo $user['photo']; ?>"><br><br> -->
