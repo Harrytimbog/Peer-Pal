@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $faculty = $_POST["faculty"];
     $study_mode = $_POST["study_mode"];
     // $photo = $_POST["photo"]; // Remove this line
+    $phone_number = $_POST["phone_number"];
     $program_type = $_POST["program_type"];
     $about_me = $_POST["about_me"];
     $student_type = $_POST["student_type"];
@@ -69,10 +70,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Write the SQL Script to update to database
 
-    $sql = "UPDATE users SET first_name = ?, last_name = ?, date_of_birth = ?, nationality = ?, gender = ?, faculty = ?, study_mode = ?, photo = ?, program_type = ?, about_me = ?, student_type = ? WHERE id = ?";
+    $sql = "UPDATE users SET first_name = ?, last_name = ?, date_of_birth = ?, nationality = ?, gender = ?, faculty = ?, study_mode = ?,  phone_number = ?, photo = ?, program_type = ?, about_me = ?, student_type = ? WHERE id = ?";
 
     $result = $pdo->prepare($sql);
-    $result->execute([$first_name, $last_name, $date_of_birth, $nationality, $gender, $faculty, $study_mode, $photo, $program_type, $about_me, $student_type, $_SESSION['user_id']]);
+    $result->execute([$first_name, $last_name, $date_of_birth, $nationality, $gender, $faculty, $study_mode,  $phone_number, $photo, $program_type, $about_me, $student_type, $_SESSION['user_id']]);
 
     header("Location: ../../../../profile.php");
     exit; // Ensure no further code execution after redirection

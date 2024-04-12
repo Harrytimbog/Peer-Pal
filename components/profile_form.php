@@ -242,6 +242,10 @@
     <option value="Part-time"<?php echo ($user['study_mode'] == "Part-time") ? " selected" : ""; ?>>Part-Time</option>
   </select>
   <br><br>
+
+  <label for="phone_number">Phone Number:</label>
+  <input type="text" id="last_name" name="phone_number" value="<?php echo $user['phone_number']; ?>"><br><br>
+
   
   <label for="photo">Photo:</label>
   <input id="photo" name="photo" type="file" value=<?php echo $user['photo']; ?>>

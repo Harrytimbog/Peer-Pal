@@ -43,6 +43,7 @@ try {
                   <div class="profile-info">
                       <p><strong>Username:</strong> <?php echo $user['username']; ?></p>
                       <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
+                      <p><strong>Phone Number:</strong> <?php echo $user['phone_number']; ?></p>
                       <p><strong>First Name:</strong> <?php echo $user['first_name']; ?></p>
                       <p><strong>Last Name:</strong> <?php echo $user['last_name']; ?></p>
                       <p><strong>Nationality:</strong> <?php echo $user['nationality']; ?></p>
