@@ -50,6 +50,7 @@ try {
             <div class="profile-info">
                 <p><strong>Username:</strong> <?php echo $user['username']; ?></p>
                 <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
+                <p><strong>Phone Number:</strong> <?php echo $user['phone_number']; ?></p>
                 <p><strong>First Name:</strong> <?php echo $user['first_name']; ?></p>
                 <p><strong>Last Name:</strong> <?php echo $user['last_name']; ?></p>
                 <p><strong>Nationality:</strong> <?php echo $user['nationality']; ?></p>
@@ -59,7 +60,25 @@ try {
             </div>
             <div class="profile-actions">
                 <a href="/" class="button" id="back-btn">Back to home</a>
+                <p>
+                <strong></strong> 
+        <a href="https://wa.me/<?php echo $user['phone_number']; ?>">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="WhatsApp Icon" style="vertical-align: middle; margin-right: 5px;">
+
+          </a>
+          </p>
+          <p>
+          <strong></strong> 
+        <a href="mailto:<?php echo $user['email']; ?>">
+            <img src="https://cdn-icons-png.flaticon.com/128/888/888853.png" alt="Email Icon" style="vertical-align: middle; margin-right: 5px;">
+
+        </a>
+        </a>
+    </p>      
             </div>
+            </div>
+
+            
         </section>
     </div>
     <!-- FOOTER -->
