@@ -14,6 +14,10 @@ img {
   max-width: 100%;
 }
 
+.match-request {
+  min-height: 70vh;
+}
+
 .match-request-main,
 .match-request-none {
   height: 80vh;

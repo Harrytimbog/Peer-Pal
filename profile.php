@@ -46,7 +46,7 @@ try {
                       <p><strong>First Name:</strong> <?php echo $user['first_name']; ?></p>
                       <p><strong>Last Name:</strong> <?php echo $user['last_name']; ?></p>
                       <p><strong>Nationality:</strong> <?php echo $user['nationality']; ?></p>
-                      <p><strong>Date of Birth:</strong> <?php echo date('F j, Y', strtotime($user['date_of_birth'])); ?></p>
+                      <p><strong>Date of Birth:</strong> <?php echo isset($user['date_of_birth']) ? date('F j, Y', strtotime($user['date_of_birth'])) : ''; ?></p>                      
                       <p><strong>Gender:</strong> <?php echo $user['gender']; ?></p>
                       <p><strong>Degree Level:</strong> <?php echo $user['program_type']; ?></p><br><br><br><br>
                       <!-- Display other user details here -->

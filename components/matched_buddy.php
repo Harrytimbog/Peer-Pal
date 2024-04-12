@@ -39,23 +39,23 @@ if (isset($_SESSION['user_id'])) {
 
                 // Display a success message
                 echo '<div style="height: 100vh;">';
-                echo "<p>Successfully matched with {$selected_buddy['username']}!</p>";
+                echo "<h1 class='matched-user-header'>Successfully matched with {$selected_buddy['username']}!</h1>";
                 echo "</div>";
             } else {
                 // Display a message indicating that the match request already exists
                 echo '<div style="height: 100vh;">';
-                echo "<p>Match request with {$selected_buddy['username']} already exists.</p>";
+                echo "<h1 class='matched-user-header'>Match request with {$selected_buddy['username']} already exists.</h1>";
                 echo "</div>";
             }
         } else {
             // Display a message when no potential buddies are found
             echo '<div style="height: 100vh;">';
-            echo "<p>Didn't find a buddy yet...</p>";
+            echo "<h1 class='matched-user-header'>Didn't find a buddy yet...</h1>";
             echo "</div>";
         }
     } catch (PDOException $e) {
         // Handle PDO exceptions
-        echo "<h1>Server Error</h1>";
+        echo "<h1 class='matched-user-header'>Server Error</h1>";
         echo "<h3>Something went wrong</h3> " . $e->getMessage();
     }
 }

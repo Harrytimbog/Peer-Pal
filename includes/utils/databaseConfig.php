@@ -75,9 +75,21 @@ try {
       UNIQUE (requester_id, requested_id)
   )";
 
+
+  $sql4 = "CREATE TABLE IF NOT EXISTS reviews (
+      id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      reviewer_id INT(11) UNSIGNED NOT NULL,
+      reviewed_user_id INT(11) UNSIGNED NOT NULL, -- Added column for the user being reviewed
+      comment TEXT,
+      FOREIGN KEY (reviewer_id) REFERENCES users(id) ON DELETE CASCADE,
+      FOREIGN KEY (reviewed_user_id) REFERENCES users(id) ON DELETE CASCADE, -- Added foreign key constraint
+      UNIQUE (reviewer_id)
+  )";
+
   $pdo->exec($sql);
   $pdo->exec($sql2);
   $pdo->exec($sql3);
+  $pdo->exec($sql4);
   
 // echo "Connected Successfully";
   // echo "User table created successfully";
